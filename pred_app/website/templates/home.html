@@ -5,16 +5,16 @@ Home
 {% endblock %}
 
 {% block section1 %}
-    <div id='section_head' class='fluid-container mt-sm-2'>
-        <div id='section_head' style="border: thin solid grey" class='col-sm-3 bg-dark'>
-            <h1 class="mt-sm-2" align="center">Daily Predictions</h1>
+    <div id='section_head' class='header-container'>
+        <div id='section_head' class='h1-container'>
+            <h1 class="h1" align="center">Daily Predictions</h1>
         </div>
     </div>
-    <div class=row>
+    <div class='games-container'>
         {% set count = namespace(c = 1) %}
         {% for row in pred_table.itertuples() | batch(1, '-') %}
-        <div class="col-sm-3 mt-sm-2 mb-sm-0">
-            <table class='table table-striped table-dark table-sm'>
+        <div class="table-container">
+            <table class='table'>
                 <thead>
                     <tr>
                         <th>Status</th>
@@ -26,7 +26,7 @@ Home
                 </thead>
                 <tbody>
                     {% for value in row %}
-                    <h6 class='mb-sm-0 bg-dark'>Game {{count.c}} - {{ value[6] }} P.M. ET</h6>
+                    <h6 class=''>Game {{count.c}} - {{ value[6] }} P.M. ET</h6>
                     <tr>
                         <td>Away</td>
                         <td>{{value[5]}}</td>
@@ -52,19 +52,19 @@ Home
 {% endblock %}
 
 {% block section2 %}
-    <div class=row>
-        <div class="col-xl-3 col-lg-4 col-md-6 mt-sm-0 offset-sm-1">
-            <img src="/static/images/ROC_AUC_Curve.png" class="img-fluid">
+    <div class='bottom-container'>
+        <div class="imd-div">
+            <img src="/static/images/ROC_AUC_Curve.png" class="img">
         </div>    
-        <div class="col-xl-4 col-lg-4 col-md-6 mt-sm-0 offset-sm-0">
-            <h6 class='mb-sm-0 bg-dark'>Daily Scoring Metrics (50 Tests)</h6>
+        <div class="analytics-table">
+            <h6 class='h6'>Daily Scoring Metrics (50 Tests)</h6>
             {% for table in metrics_table %}
                 {{metric_headers[loop.index]}}
                 {{table | safe}}
             {% endfor %}
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mt-sm-0 offset-sm-0">
-            <img src="/static/images/Precision_Recall_Curve.png" class="img-fluid">
+        <div class="img-div">
+            <img src="/static/images/Precision_Recall_Curve.png" class="img">
         </div>
     </div>
 {% endblock %}

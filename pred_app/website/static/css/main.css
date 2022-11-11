@@ -1,8 +1,90 @@
+.h1{
+    letter-spacing: 1.2px;
+    font-size: 28px;
+}
+
+.header-container{
+    box-shadow: 5px 5px 10px rgb(31, 31, 31), -5px -5px 10px rgb(31, 31, 31);
+    background-color: rgb(58, 58, 58);
+    width: 30%;
+    display: flex;
+    margin: auto;
+    padding: 17px;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.h1-container{
+    align-items: center;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.games-container{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.table-container{
+    background-color: rgb(43, 43, 43);
+    width: 47%;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    flex-direction: row;
+    margin: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 .table {
     font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: 14px;
     border: 1px solid white;
     border-color: white;
+    color: white;
+    background-color: black;
+    overflow: scroll;
+    width: 100%;
+    position: relative;
+}
+
+.bottom-container{
+    margin-top: 55px;
+    width: 100%;
+    margin: auto;
+}
+
+.img-div{
+    background-color: blue;
+}
+
+.img{
+    width: 300px;
+}
+
+
+.analytics-table{
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    padding: 20px;
+    width: 55%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 label {
